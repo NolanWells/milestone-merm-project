@@ -16,12 +16,18 @@ function App() {
               </Nav.Link>
             </Nav.Item>
 
-            
             <Nav.Item>
               <Nav.Link href="/">
-                <Link to='/'>Home</Link>
+                <Link to='/'>Add A Movie</Link>
               </Nav.Link>
             </Nav.Item>
+
+            <Nav.Item>
+              <Nav.Link href="/">
+                <Link to='/'>See All Reviews</Link>
+              </Nav.Link>
+            </Nav.Item>
+
 
 
 
