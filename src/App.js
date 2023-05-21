@@ -1,6 +1,6 @@
 // import './App.css';
 import { BrowserRouter as Router, Link, Route } from "react-router-dom";
-import Nav from "react-bootstrap/Nav"
+import Nav from "react-bootstrap/Nav";
 import Container from "react-bootstrap/Container";
 function App() {
   return (
@@ -8,14 +8,14 @@ function App() {
       <Router>
         <Container>
           <Nav>
-
             {/* home */}
             <Nav.Item>
               <Nav.Link href="/">
-                <Link to='/'>Home</Link>
+                <Link to="/">Home</Link>
               </Nav.Link>
             </Nav.Item>
 
+            {/* 
             <Nav.Item>
               <Nav.Link href="/">
                 <Link to='/'>Add A Movie</Link>
@@ -26,18 +26,13 @@ function App() {
               <Nav.Link href="/">
                 <Link to='/'>See All Reviews</Link>
               </Nav.Link>
-            </Nav.Item>
-
-
-
-
-
-
-
-
-
+            </Nav.Item> */}
           </Nav>
         </Container>
+
+        <header>
+          <h1>Movies</h1>
+        </header>
       </Router>
     </>
   );
