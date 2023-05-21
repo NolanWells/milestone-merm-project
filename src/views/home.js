@@ -10,7 +10,7 @@ export default function Home () {
     return(
         <Container>
             <Card>
-                Testing 'Home'
+                <h1>Home Page</h1>
             </Card>
         </Container>
     )

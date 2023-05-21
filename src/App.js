@@ -32,15 +32,7 @@ function App() {
                 <Link to='/comment'>Add a Comment</Link>
               </Nav.Link>
             </Nav.Item>
-
-
-
-
-
-
-
-
-
+            
           </Nav>
         </Container>
         <div className="display"></div>
