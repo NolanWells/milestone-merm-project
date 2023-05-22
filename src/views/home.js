@@ -32,23 +32,20 @@ export default function Home() {
 
 
   return (
-    <Container>
-      {console.log(movies)}
+   <Container>
       {movies ? (
-        <Card>
-          {movies.results.map((movie) => (
-            <Card key={movie.id}>
-              <Card.Img
-                variant="top"
-                src={getImageUrl(movie.poster_path)}
-                alt="Movie poster"
-              />
-              <Card.Body>
-                <Card.Title>{movie.original_title}</Card.Title>
-              </Card.Body>
-            </Card>
-          ))}
-        </Card>
+        movies.results.map((movie) => (
+          <Card key={movie.id}>
+            <Card.Img
+              variant="top"
+              src={getImageUrl(movie.poster_path)}
+              alt="Movie poster"
+            />
+            <Card.Body>
+              <Card.Title>{movie.original_title}</Card.Title>
+            </Card.Body>
+          </Card>
+        ))
       ) : (
         "loading.."
       )}
