@@ -34,7 +34,7 @@ export default function Home() {
   };
 
 return(
-    <Card><h1>Comment Page</h1></Card>
+    <Card><h1>Details Page</h1></Card>
 );
 
 }

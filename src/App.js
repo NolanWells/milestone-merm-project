@@ -5,7 +5,7 @@ import Container from "react-bootstrap/Container";
 
 import Home from "./views/home";
 import Profile from "./views/profile";
-import Comment from "./views/comment";
+import Details from "./views/details";
 
 function App() {
   return (
@@ -13,7 +13,6 @@ function App() {
       <Router>
         <Container>
           <Nav>
-
             {/* home */}
             <Nav.Item>
               <Nav.Link href="/">
@@ -33,7 +32,7 @@ function App() {
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/profile' element={<Profile />} />
-          <Route path='/comment' element={<Comment />} />
+          <Route path='/details' element={<Details />} />
         </Routes>
       </Router>
     </>
