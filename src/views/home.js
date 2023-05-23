@@ -53,8 +53,8 @@ export default function Home() {
                 <Card.Title>{movie.original_title}</Card.Title>
                 <Nav>
                   <Nav.Item>
-                    <Nav.Link href='/comment'>
-                      <Link to='/comment'>Add a Comment</Link>
+                    <Nav.Link href={`/comment?data=${movie.id}`}>
+                      <Link to={`/comment?data=${movie.id}`}>Add a Comment</Link>
                     </Nav.Link>
                   </Nav.Item>
                 </Nav>
