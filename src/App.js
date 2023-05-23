@@ -11,7 +11,12 @@ function App() {
   return (
     <>
       <Router>
-        <Container>
+        <Container class="navbar navbar-expand-sm bg-dark navbar-light justify-content-center sticky-top">
+        <div class="container-fluid">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
           <Nav>
             {/* home */}
             <Nav.Item>
