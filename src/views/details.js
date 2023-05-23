@@ -1,9 +1,11 @@
 import Container from "react-bootstrap/esm/Container";
 import Card from "react-bootstrap/Card";
-import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
+import { useState, useEffect } from "react";
 
 export default function Home() {
+  const [details, setDetails] = useState(null);
+
   //this will look at the params and find movie id
   const location = useLocation()
   const params = new URLSearchParams(location.search)
@@ -23,8 +25,7 @@ export default function Home() {
   useEffect(() => {
     fetch(url, options)
       .then((res) => res.json())
-      .then((json) => console.log(json));
-      
+      .then((json) => setDetails(json));
   }, []);
 
   // LINKS URL WITH EACH INDIVIDUAL MOVIE IMAGE TO DISPLAY ON WEBPAGE
@@ -34,7 +35,7 @@ export default function Home() {
   };
 
 return(
-    <Card><h1>Details Page</h1></Card>
+    <Card>{details.original_title}</Card>
 );
 
 }
