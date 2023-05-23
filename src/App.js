@@ -4,6 +4,7 @@ import Nav from "react-bootstrap/Nav"
 import Container from "react-bootstrap/Container";
 
 import Home from "./views/home";
+import TopRated from "./views/TopRated";
 import Upcoming from "./views/Upcoming";
 import Profile from "./views/profile";
 import Details from "./views/details";
@@ -18,6 +19,11 @@ function App() {
             <Nav.Item>
               <Nav.Link href="/">
                 <Link to='/'>Home</Link>
+              </Nav.Link>
+            </Nav.Item>
+            <Nav.Item>
+              <Nav.Link href="/">
+                <Link to='/TopRated'>TopRated</Link>
               </Nav.Link>
             </Nav.Item>
 
@@ -38,6 +44,7 @@ function App() {
         <div className="display"></div>
         <Routes>
           <Route path='/' element={<Home />} />
+          <Route path='/TopRated' element={<TopRated />} />
           <Route path='/Upcoming' element={<Upcoming />} />
           <Route path='/profile' element={<Profile />} />
           <Route path='/details' element={<Details />} />
