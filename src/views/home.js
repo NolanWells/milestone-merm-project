@@ -1,7 +1,7 @@
 import Container from "react-bootstrap/esm/Container";
 import Card from "react-bootstrap/Card";
 import { Nav } from "react-bootstrap";
-import { BrowserRouter as Router, Link, Route, Routes } from "react-router-dom";
+import {Link} from "react-router-dom";
 import { useState, useEffect } from "react";
 
 export default function Home() {

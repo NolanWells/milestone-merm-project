@@ -4,6 +4,7 @@ import Nav from "react-bootstrap/Nav"
 import Container from "react-bootstrap/Container";
 
 import Home from "./views/home";
+import Upcoming from "./views/Upcoming";
 import Profile from "./views/profile";
 import Details from "./views/details";
 
@@ -12,11 +13,17 @@ function App() {
     <>
       <Router>
         <Container fixed="top" className="sticky-top">
-          <Nav variant="pills" className="navbar navbar-expand-lg navbar-dark bg-dark">
+          <Nav>
             {/* home */}
             <Nav.Item>
               <Nav.Link href="/">
                 <Link to='/'>Home</Link>
+              </Nav.Link>
+            </Nav.Item>
+
+            <Nav.Item>
+              <Nav.Link href="/">
+                <Link to='/Upcoming'>Upcoming</Link>
               </Nav.Link>
             </Nav.Item>
 
@@ -31,6 +38,7 @@ function App() {
         <div className="display"></div>
         <Routes>
           <Route path='/' element={<Home />} />
+          <Route path='/Upcoming' element={<Upcoming />} />
           <Route path='/profile' element={<Profile />} />
           <Route path='/details' element={<Details />} />
         </Routes>
