@@ -30,7 +30,7 @@ export default function Home() {
   };
 
 return(
-    console.log('Comment page working')
+    <Card><h1>Comment Page</h1></Card>
 );
 
 }
