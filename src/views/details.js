@@ -35,7 +35,7 @@ export default function Home() {
   };
 
 return(
-    <Card>{details.original_title}</Card>
+    <Card>{details && details.original_title}</Card>
 );
 
 }
