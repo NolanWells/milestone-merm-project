@@ -11,8 +11,8 @@ function App() {
   return (
     <>
       <Router>
-        <Container>
-          <Nav>
+        <Container fixed="top" className="sticky-top">
+          <Nav variant="pills" className="navbar navbar-expand-lg navbar-dark bg-dark">
             {/* home */}
             <Nav.Item>
               <Nav.Link href="/">
