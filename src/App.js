@@ -26,12 +26,6 @@ function App() {
                 <Link to='/profile'>View Profile</Link>
               </Nav.Link>
             </Nav.Item>
-
-            <Nav.Item>
-              <Nav.Link href="/">
-                <Link to='/comment'>Add a Comment</Link>
-              </Nav.Link>
-            </Nav.Item>
             
           </Nav>
         </Container>

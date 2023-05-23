@@ -1,5 +1,7 @@
 import Container from "react-bootstrap/esm/Container";
 import Card from "react-bootstrap/Card";
+import { Nav } from "react-bootstrap";
+import { BrowserRouter as Router, Link, Route, Routes } from "react-router-dom";
 import { useState, useEffect } from "react";
 
 export default function Home() {
@@ -16,44 +18,46 @@ export default function Home() {
     },
   };
 
+  // REQUESTS DATA FROM THE API
   useEffect(() => {
-    //this request data from themovieAPI
     fetch(url, options)
       .then((res) => res.json())
       .then((json) => setMovies(json));
-    // .then(json => console.log(json))
   }, []);
-  // .catch(err => console.error('error:' + err))
 
-  //this will take the "poster_path" property and combine to base path 
+  // LINKS URL WITH EACH INDIVIDUAL MOVIE IMAGE TO DISPLAY ON WEBPAGE
   const getImageUrl = (posterPath) => {
     const baseImageUrl = 'https://image.tmdb.org/t/p/w500';
     return baseImageUrl + posterPath;
   };
 
-
-
   return (
    <Container>
       <div className="d-flex flex-wrap">
         {movies ? (
-          //this will make cards for every movie
+          // CREATES A CARD FOR EACH MOVIE IMAGE
           movies.results.map((movie) => (
             <div className="col-lg-3 col-md-4 col-sm-6" key={movie.id}>
             <Card 
               className="d-flex flex-column justify-content-center align-items-center" 
               key={movie.id}
-              style={{ width: "200px", height: "300px" }}
+              style={{ width: "200px", height: "400px", marginTop: "50px" }}
               >
               <Card.Img
                 variant="top"
                 src={getImageUrl(movie.poster_path)}
                 alt="Movie poster"
-                style={{ width: "150px", height: "auto", objectFit: "cover" }}
-                className="rounded-circle"
+                style={{ width: "200px", height: "300", objectFit: "cover" }}
               />
               <Card.Body>
                 <Card.Title>{movie.original_title}</Card.Title>
+                <Nav>
+                  <Nav.Item>
+                    <Nav.Link href='/comment'>
+                      <Link to='/comment'>Add a Comment</Link>
+                    </Nav.Link>
+                  </Nav.Item>
+                </Nav>
               </Card.Body>
             </Card>
             </div>
