@@ -1,9 +1,11 @@
 import Container from "react-bootstrap/esm/Container";
 import Card from "react-bootstrap/Card";
-import { Row, Col } from "react-bootstrap";
 import { useLocation } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { CardGroup } from "react-bootstrap/esm";
+
+import createreview from "./createReview";
+import Createreview from "./createReview";
 
 export default function Home() {
   const [details, setDetails] = useState(null);
@@ -62,7 +64,7 @@ export default function Home() {
 
         {/* // CARD 3 */}
         <Card>
-          <Card.Body>Add Your Review</Card.Body>
+        <Createreview/>
         </Card>
       </CardGroup>
     </Container>
