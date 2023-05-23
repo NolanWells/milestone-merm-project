@@ -11,8 +11,13 @@ function App() {
   return (
     <>
       <Router>
-        <Container>
-          <Nav>
+        <Container class="navbar navbar-expand-sm bg-dark navbar-light justify-content-center sticky-top">
+          
+            <div class="container-fluid">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <Nav >
             {/* home */}
             <Nav.Item>
               <Nav.Link href="/">
@@ -27,6 +32,11 @@ function App() {
             </Nav.Item>
             
           </Nav>
+          <form class="d-flex">
+        <input class="form-control me-2" type="text" placeholder="Search"></input>
+        <button class="btn btn-primary" type="button">Search</button>
+      </form>
+      </div>
         </Container>
         <div className="display"></div>
         <Routes>
