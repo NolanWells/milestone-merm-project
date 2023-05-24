@@ -13,7 +13,7 @@ function App() {
   return (
     <>
       <Router>
-        <Container class="navbar navbar-expand-sm bg-dark navbar-light sticky-top">
+        <Container class="navbar navbar-expand-sm bg-dark sticky-top">
           <div class="container-fluid">
             <button
               class="navbar-toggler"
