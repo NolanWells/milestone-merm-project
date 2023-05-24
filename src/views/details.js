@@ -56,12 +56,6 @@ export default function Home() {
           <Card.Body><details><summary><b><u>Overview</u></b></summary>{details && details.overview}</details></Card.Body>
           <Card.Body><details><summary><b><u>Other Information</u></b></summary><b>Release Date:</b> {details && details.release_date}<br /><b>Runtime:</b> {details && details.runtime} minutes</details></Card.Body>
         </Card>
-
-<<<<<<< HEAD
-
-
-
-=======
         {/* // CARD 2 */}
         <Card>
           <Card.Body><h5>Reviews</h5></Card.Body>
@@ -74,5 +68,4 @@ export default function Home() {
       </CardGroup>
     </Container>
   );
->>>>>>> 83900af300d07a045a86a3a1417570ebb10f3dd8
 }
