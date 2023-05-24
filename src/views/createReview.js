@@ -6,7 +6,7 @@ export default function Createreview () {
                 <label htmlFor="review"></label>
                 <textarea
                     className="form-control"
-                    placeholder="Write your review"
+                    placeholder="Type here"
                     type="text"
                     name="review"
                     id="review"
@@ -16,9 +16,10 @@ export default function Createreview () {
                 ></textarea>
                 <br/>
                 <br/>
-                <h5><label htmlFor="stars" >Star Rating</label></h5>
+                <h5><label htmlFor="stars">Star Rating</label></h5>
                 <input
                     className="form-control"
+                    placeholder="3"
                     id="stars"
                     name="stars"
                     type="number"
