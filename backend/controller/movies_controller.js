@@ -1,5 +1,6 @@
 const express = require('express')
 const router = express.Router()
+const reviewSchema = require('../models/review')
 
 router.get('/', (req, res) => {
     res.json({
@@ -8,7 +9,10 @@ router.get('/', (req, res) => {
 })
 // /movies
 router.post('/', (req, res) => {
-    console.log('the post request is working');
+   reviewSchema.create(req.body)
+   .then(() => console.log('document has been created'))
+   .catch(err =>console.log(err))
+
 })
 
 
