@@ -12,7 +12,7 @@ router.post('/', (req, res) => {
    reviewSchema.create(req.body)
    .then(() => console.log('document has been created'))
    .catch(err =>console.log(err))
-
+   res.redirect('/')
 })
 
 
