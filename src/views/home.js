@@ -47,7 +47,7 @@ export default function Home() {
                 variant="top"
                 src={getImageUrl(movie.poster_path)}
                 alt="Movie poster"
-                style={{ width: "200px", height: "300", objectFit: "cover" }}
+                style={{ width: "200px", height: "250px", objectFit: "cover" }}
               />
               <Card.Body>
                 <Card.Title>{movie.original_title}</Card.Title>
