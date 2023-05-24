@@ -38,4 +38,7 @@ return(
     <Card>{details && details.original_title}</Card>
 );
 
+
+
+
 }
