@@ -1,14 +1,14 @@
 import Container from "react-bootstrap/esm/Container";
 import Card from "react-bootstrap/Card";
 import { Nav } from "react-bootstrap";
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 
-export default function Home() {
+export default function Upcoming() {
   const [movies, setMovies] = useState(null);
 
   const url =
-    "https://api.themoviedb.org/3/discover/movie?include_adult=false&include_video=false&language=en-US&page=1&sort_by=popularity.desc&with_original_language=en";
+    "https://api.themoviedb.org/3/movie/upcoming?language=en-US&page=1";
   const options = {
     method: "GET",
     headers: {
@@ -47,7 +47,7 @@ export default function Home() {
                 variant="top"
                 src={getImageUrl(movie.poster_path)}
                 alt="Movie poster"
-                style={{ width: "200px", height: "250px", objectFit: "cover" }}
+                style={{ width: "200px", height: "300", objectFit: "cover" }}
               />
               <Card.Body>
                 <Card.Title>{movie.original_title}</Card.Title>
