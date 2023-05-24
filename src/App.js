@@ -13,15 +13,15 @@ function App() {
   return (
     <>
       <Router>
-        <Container class="navbar navbar-expand-sm bg-dark sticky-top">
-          <div class="container-fluid">
+        <Container className="navbar navbar-expand-sm bg-dark navbar-light sticky-top">
+          <div className="container-fluid">
             <button
-              class="navbar-toggler"
+              className="navbar-toggler"
               type="button"
               data-bs-toggle="collapse"
               data-bs-target="#mynavbar"
             >
-              <span class="navbar-toggler-icon"></span>
+              <span className="navbar-toggler-icon"></span>
             </button>
 
             <Nav>
@@ -49,13 +49,13 @@ function App() {
                 </Nav.Link>
               </Nav.Item>
             </Nav>
-            <form class="d-flex">
+            <form className="d-flex">
               <input
-                class="form-control me-2"
+                className="form-control me-2"
                 type="text"
                 placeholder="Search"
               ></input>
-              <button class="btn btn-primary" type="button">
+              <button className="btn btn-primary" type="button">
                 Search
               </button>
             </form>
