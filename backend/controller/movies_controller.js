@@ -1,6 +1,13 @@
 const express = require('express')
 const router = express.Router()
 const reviewSchema = require('../models/review')
+const bodyParser = require('body-parser');
+
+
+// middleware
+router.use(bodyParser.json());
+router.use(bodyParser.urlencoded({ extended: true }));
+
 
 router.get('/', (req, res) => {
     res.json({
@@ -9,9 +16,16 @@ router.get('/', (req, res) => {
 })
 // /movies
 router.post('/', (req, res) => {
-   reviewSchema.create(req.body)
-   .then(() => console.log('document has been created'))
-   .catch(err =>console.log(err))
+    const { review, stars } = req.body;
+  
+    const newReview = new reviewSchema({
+      comment: review,
+      rating: stars
+    });
+  
+    newReview.save()
+    .then(() => console.log('document has been created'))
+    .catch(err =>console.log(err))
    res.redirect('/')
 })
 

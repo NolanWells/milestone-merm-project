@@ -9,18 +9,19 @@ const movies = require('./controller/movies_controller')
 //mongoose connection
  mongoose.connect(process.env.MONGO_URI,{useNewUrlParser: true, useUnifiedTopology: true})
     .then(() => console.log('connection was successful'))
-    .catch((err)=>console.log('error404'))
+    .catch((err)=>console.log(`database error ${err}`))
 
 //middleware   
+app.use(express.json());
+
+
 // Have Node serve the files for our built React app
 app.use(express.static(path.join(__dirname, '../build')));
 
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, '../build', 'index.html'));
 })
-app.post('/', (req, res) => {
-    
-})
+
 
 app.use('/movies', movies)
 
