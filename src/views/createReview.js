@@ -4,7 +4,7 @@ export default function Createreview () {
             <h5>Add Your Review</h5>
             <form action="/movies" method="POST">
                 <label htmlFor="review"></label>
-                <input
+                <textarea
                     className="form-control"
                     placeholder="Write your review"
                     type="text"
@@ -13,7 +13,7 @@ export default function Createreview () {
                     
                     required
 
-                ></input>
+                ></textarea>
                 <br/>
                 <br/>
                 <h5><label htmlFor="stars" >Star Rating</label></h5>

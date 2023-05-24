@@ -59,7 +59,7 @@ export default function Home() {
 
         {/* // CARD 2 */}
         <Card>
-          <Card.Body>Reviews</Card.Body>
+          <Card.Body><h5>Reviews</h5></Card.Body>
         </Card>
 
         {/* // CARD 3 */}
