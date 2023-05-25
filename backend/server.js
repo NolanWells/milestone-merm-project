@@ -13,6 +13,8 @@ const movies = require('./controller/movies_controller')
 
 //middleware   
 app.use(express.json());
+app.use(express.static("public"));
+
 
 
 // Have Node serve the files for our built React app
