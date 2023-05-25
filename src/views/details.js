@@ -5,6 +5,7 @@ import { useLocation } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { CardGroup } from "react-bootstrap/esm";
 
+import Reviews from "./Reviews";
 import Createreview from "./createReview";
 
 export default function Home() {
@@ -58,7 +59,7 @@ export default function Home() {
         </Card>
         {/* // CARD 2 */}
         <Card>
-          <Card.Body><h5>Reviews</h5></Card.Body>
+          <Reviews movie_id={movie_id}/>
         </Card>
 
         {/* // CARD 3 */}

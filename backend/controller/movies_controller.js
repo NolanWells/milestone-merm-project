@@ -8,6 +8,20 @@ const bodyParser = require('body-parser');
 router.use(bodyParser.json());
 router.use(bodyParser.urlencoded({ extended: true }));
 
+//this is to send reviews from other users about the selected movie on the details page
+router.get('/:movie_id', (req ,res) => {
+    console.log('axios made the request to the back end');
+    reviewSchema.find().where(movie_id).equals(req.params.movie_id)
+    //execute will execute the code above
+    .exec((err, reviews) => { 
+        if (err) {
+          // Handle the error
+          return res.status(500).json({ error: 'Internal Server Error' });
+        }
+        res.json(reviews)
+    })
+})
+
 
 router.get('/', (req, res) => {
     res.json({
