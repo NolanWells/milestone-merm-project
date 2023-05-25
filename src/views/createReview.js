@@ -1,8 +1,11 @@
-export default function Createreview() {
+import React from "react";
+export default function Createreview( props ) {
+  const { movie_id } = props;
   return (
     <div>
       <h5>Add Your Review</h5>
       <form action="/movies" method="POST">
+      <input type="hidden" name="movie_id" value={movie_id} /> {/*passes the movie_id and cannot be seen*/}
         <label htmlFor="review"></label>
         <textarea
           className="form-control"

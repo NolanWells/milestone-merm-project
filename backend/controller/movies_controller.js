@@ -16,11 +16,13 @@ router.get('/', (req, res) => {
 })
 // /movies
 router.post('/', (req, res) => {
-    const { review, stars } = req.body;
-  
+    console.log(req.body);
+    const { comment, rating, movie_id } = req.body;
+
     const newReview = new reviewSchema({
-      comment: review,
-      rating: stars
+      comment: comment,
+      rating: rating,
+      movie_id: movie_id,
     });
   
     newReview.save()

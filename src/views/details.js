@@ -1,10 +1,10 @@
+import React from "react";
 import Container from "react-bootstrap/esm/Container";
 import Card from "react-bootstrap/Card";
 import { useLocation } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { CardGroup } from "react-bootstrap/esm";
 
-import createreview from "./createReview";
 import Createreview from "./createReview";
 
 export default function Home() {
@@ -63,7 +63,7 @@ export default function Home() {
 
         {/* // CARD 3 */}
         <Card>
-        <Createreview/>
+         <Createreview movie_id={movie_id}/> {/*passing down the id so that we can store it with the comment in the database */}
         </Card>
       </CardGroup>
     </Container>
