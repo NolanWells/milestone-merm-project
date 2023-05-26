@@ -1,5 +1,5 @@
 // import './App.css';
-import { BrowserRouter as Router, Link, Route, Routes } from "react-router-dom";
+import { HashRouter as Router, Link, Route, Routes } from "react-router-dom";
 import Nav from "react-bootstrap/Nav";
 import Container from "react-bootstrap/Container";
 
@@ -67,7 +67,7 @@ function App() {
           <Route path="/TopRated" element={<TopRated />} />
           <Route path="/Upcoming" element={<Upcoming />} />
           <Route path="/profile" element={<Profile />} />
-          <Route path="/details" element={<Details />} />
+          <Route path="/details/:movie_id" element={<Details />} />
         </Routes>
       </Router>
     </>

@@ -1,7 +1,7 @@
 import React from "react";
 import Container from "react-bootstrap/esm/Container";
 import Card from "react-bootstrap/Card";
-import { useLocation } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { CardGroup } from "react-bootstrap/esm";
 
@@ -12,9 +12,7 @@ export default function Home() {
   const [details, setDetails] = useState(null);
 
   //this will look at the params and find movie id
-  const location = useLocation()
-  const params = new URLSearchParams(location.search)
-  const movie_id = params.get('data')
+  const { movie_id } = useParams()
 
   const url =
     `https://api.themoviedb.org/3/movie/${movie_id}?include_adult=false&include_video=false&language=en-US&page=1&sort_by=popularity.desc&with_original_language=en`;

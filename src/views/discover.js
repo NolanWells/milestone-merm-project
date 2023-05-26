@@ -56,7 +56,7 @@ export default function Home() {
                   <Stars />
                   <Nav>
                     <Nav.Item>
-                      <Nav.Link href={`/details?data=${movie.id}`}>
+                      <Link to={`/details/${movie.id}`}>
                         <Button
                           style={{ position: "absolute", bottom: "10%", left: "18%" }}
                           variant="dark"
@@ -64,7 +64,7 @@ export default function Home() {
                           to={`/details?data=${movie.id}`}>
                           Details & Reviews
                         </Button>
-                      </Nav.Link>
+                      </Link>
                     </Nav.Item>
                   </Nav>
                 </Card>
