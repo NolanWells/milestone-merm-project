@@ -47,24 +47,28 @@ export default function Home() {
           className="d-flex flex-column justify-content-center align-items-center"
           key={details && details.id}
         >
+          <br />
           <h5>{details && details.original_title}</h5>
           <Card.Img
             variant="top"
             src={getImageUrl(details && details.poster_path)}
             alt="Movie poster"
-            style={{ width: "200px", height: "300", objectFit: "cover" }}
+            style={{ width: "80%", height: "80%", objectFit: "cover", borderRadius: "2%" }}
           />
           <Card.Body><details><summary><b><u>Overview</u></b></summary>{details && details.overview}</details></Card.Body>
           <Card.Body><details><summary><b><u>Other Information</u></b></summary><b>Release Date:</b> {details && details.release_date}<br /><b>Runtime:</b> {details && details.runtime} minutes</details></Card.Body>
         </Card>
+
         {/* // CARD 2 */}
         <Card>
-          <Reviews movie_id={movie_id}/>
+          <br />
+          <Reviews movie_id={movie_id} />
         </Card>
 
         {/* // CARD 3 */}
         <Card>
-         <Createreview movie_id={movie_id}/> {/*passing down the id so that we can store it with the comment in the database */}
+          <br />
+          <Createreview movie_id={movie_id} /> {/*passing down the id so that we can store it with the comment in the database */}
         </Card>
       </CardGroup>
     </Container>

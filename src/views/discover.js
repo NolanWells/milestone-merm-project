@@ -3,13 +3,14 @@ import Card from "react-bootstrap/Card";
 import { Button, Nav } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
+import { auto } from "@popperjs/core";
 import Stars from "./stars";
 
-export default function Upcoming() {
+export default function Home() {
   const [movies, setMovies] = useState(null);
 
   const url =
-    "https://api.themoviedb.org/3/movie/upcoming?language=en-US&page=1";
+    "https://api.themoviedb.org/3/discover/movie?include_adult=false&include_video=false&language=en-US&page=1&sort_by=popularity.desc&with_original_language=en";
   const options = {
     method: "GET",
     headers: {
