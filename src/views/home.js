@@ -1,6 +1,6 @@
 import Container from "react-bootstrap/esm/Container";
 import Card from "react-bootstrap/Card";
-import { Nav } from "react-bootstrap";
+import { Button, Nav } from "react-bootstrap";
 import {Link} from "react-router-dom";
 import { useState, useEffect } from "react";
 
@@ -54,7 +54,7 @@ export default function Home() {
                 <Nav>
                   <Nav.Item>
                     <Nav.Link href={`/details?data=${movie.id}`}>
-                      <Link to={`/details?data=${movie.id}`}>Movie Details</Link>
+                      <Button variant="secondary" size="sm" to={`/details?data=${movie.id}`}>Movie Details</Button>
                     </Nav.Link>
                   </Nav.Item>
                 </Nav>
