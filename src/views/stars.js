@@ -5,15 +5,20 @@ import Card from "react-bootstrap/Card";
 export default function Stars() {
 
     let star = ''
-    let rating = 3
+    let rating = 5
 
     for (let i = 0; i < rating; i++) {
         star += '⭐'
     }
 
+    if (rating == 0){
+        star = 'No reviews at this time'
+    }
+
     return (
+        
         <Container className="for-control">
-            <Card className="d-flex flex-column justify-content-center align-items-center">{star}</Card>
+            <div style={{ display: "flex", justifyContent: "center", textAlign: "center" }}>{star}</div>
         </Container>
     )
 

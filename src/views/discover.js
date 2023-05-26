@@ -4,6 +4,7 @@ import { Button, Nav } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { auto } from "@popperjs/core";
+import Stars from "./stars";
 
 export default function Home() {
   const [movies, setMovies] = useState(null);
@@ -42,7 +43,7 @@ export default function Home() {
               <Card
                 className="d-flex flex-column justify-content-center align-items-center"
                 key={movie.id}
-                style={{ width: "200px", height: "400px", marginTop: "50px" }}
+                style={{ width: "200px", height: "450px", marginTop: "50px" }}
               >
                 <Card.Img
                   variant="top"
@@ -50,17 +51,18 @@ export default function Home() {
                   alt="Movie poster"
                   style={{ position: "absolute", top: "0", width: "200px", height: "300px", objectFit: "cover" }}
                 />
-                <Card style={{ position: "absolute", bottom: "0", top: "75.5%", right: "0", left: "0" }}>
+                <Card style={{ position: "absolute", bottom: "0", top: "67%", right: "0", left: "0" }}>
                   <Card.Title style={{ textAlign: "center" }}>{movie.original_title}</Card.Title>
+                  <Stars />
                   <Nav>
                     <Nav.Item>
                       <Nav.Link href={`/details?data=${movie.id}`}>
                         <Button
-                          style={{ position: "absolute", bottom: "10%", left: "24%" }}
-                          variant="secondary"
+                          style={{ position: "absolute", bottom: "10%", left: "18%" }}
+                          variant="dark"
                           size="sm"
                           to={`/details?data=${movie.id}`}>
-                          Movie Details
+                          Details & Reviews
                         </Button>
                       </Nav.Link>
                     </Nav.Item>
