@@ -1,6 +1,6 @@
 import Container from "react-bootstrap/esm/Container";
 import Card from "react-bootstrap/Card";
-import { Nav } from "react-bootstrap";
+import { Button, Nav } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 
@@ -32,34 +32,40 @@ export default function Upcoming() {
   };
 
   return (
-   <Container>
-      <div className="d-flex flex-wrap">
-        {movies ? (
-          // CREATES A CARD FOR EACH MOVIE IMAGE
-          movies.results.map((movie) => (
-            <div className="col-lg-3 col-md-4 col-sm-6" key={movie.id}>
-            <Card 
-              className="d-flex flex-column justify-content-center align-items-center" 
-              key={movie.id}
-              style={{ width: "200px", height: "400px", marginTop: "50px" }}
-              >
-              <Card.Img
-                variant="top"
-                src={getImageUrl(movie.poster_path)}
-                alt="Movie poster"
-                style={{ width: "200px", height: "300", objectFit: "cover" }}
-              />
-              <Card.Body>
-                <Card.Title>{movie.original_title}</Card.Title>
-                <Nav>
-                  <Nav.Item>
-                    <Nav.Link href={`/details?data=${movie.id}`}>
-                      <Link to={`/details?data=${movie.id}`}>Movie Details</Link>
-                    </Nav.Link>
-                  </Nav.Item>
-                </Nav>
-              </Card.Body>
+    <Container className="homeContainer">
+    <div className="d-flex flex-wrap">
+      {movies ? (
+        // CREATES A CARD FOR EACH MOVIE IMAGE
+        movies.results.map((movie) => (
+          <div className="col-lg-3 col-md-4 col-sm-6" key={movie.id}>
+          <Card 
+            className="d-flex flex-column justify-content-center align-items-center" 
+            key={movie.id}
+            style={{ width: "200px", height: "400px", marginTop: "50px" }}
+            >
+            <Card.Img
+              variant="top"
+              src={getImageUrl(movie.poster_path)}
+              alt="Movie poster"
+              style={{ position: "absolute", top: "0", width: "200px", height: "300px", objectFit: "cover" }}
+            />
+            <Card style={{ position: "absolute", bottom: "0", top: "75.5%", right: "0", left: "0" }}>
+              <Card.Title style={{textAlign: "center" }}>{movie.original_title}</Card.Title>
+              <Nav>
+                <Nav.Item>
+                  <Nav.Link href={`/details?data=${movie.id}`}>
+                    <Button 
+                      style={{ position: "absolute", bottom: "10%", left: "24%" }}
+                      variant="secondary"
+                      size="sm"  
+                      to={`/details?data=${movie.id}`}>
+                        Movie Details
+                      </Button>
+                  </Nav.Link>
+                </Nav.Item>
+              </Nav>
             </Card>
+          </Card>
             </div>
           ))
         ) : (

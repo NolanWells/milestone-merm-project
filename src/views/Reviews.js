@@ -4,31 +4,38 @@ import axios from "axios";
 import Card from "react-bootstrap/Card"
 import CardGroup from "react-bootstrap/CardGroup"
 
-export default function Reviews ( {movie_id} ) {
-    const [reviews, setReviews] = useState([])
+import Stars from "./stars";
 
-    useEffect(() => {
-        axios.get(`/movies/id/${movie_id}`)
-            .then((response) => {
-                setReviews(response.data)
-            })
-            .catch((err) => console.log(`axios request didnt work :( ${err}`))
-    }, [movie_id])
+export default function Reviews({ movie_id }) {
+  const [reviews, setReviews] = useState([])
 
-    return (
-        <>
-          <h5>This is my Reviews</h5>
-          <p>Movie ID: {movie_id}</p>
-          <br />
-          <CardGroup>
-          {reviews.map((review, index) => (
-            <Card.Body key={index}>
-                <Card.Text>Comment: {review.comment}</Card.Text>
-                <Card.Text>Rating: {review.rating}</Card.Text>
-            </Card.Body>
-            ))}
-          </CardGroup>
-        </>
-      )   
+  useEffect(() => {
+    axios.get(`/movies/id/${movie_id}`)
+      .then((response) => {
+        setReviews(response.data)
+      })
+      .catch((err) => console.log(`axios request didnt work :( ${err}`))
+  }, [movie_id])
+
+  return (
+    <>
+      <h5 className="d-flex flex-column justify-content-center align-items-center">Movie Reviews</h5>
+      {/* <p>Movie ID: {movie_id}</p> */}
+      <br />
+      <CardGroup>
+
+        <Card.Body>
+          <Stars />
+        </Card.Body>
+
+        {reviews.map((review, index) => (
+          <Card.Body key={index}>
+            <Card.Text>Comment: {review.comment}</Card.Text>
+            <Card.Text>Rating: {review.rating}</Card.Text>
+          </Card.Body>
+        ))}
+      </CardGroup>
+    </>
+  )
 
 }

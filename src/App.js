@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Link, Route, Routes } from "react-router-dom";
 import Nav from "react-bootstrap/Nav";
 import Container from "react-bootstrap/Container";
 
-import Home from "./views/home";
+import Discover from "./views/discover";
 import TopRated from "./views/TopRated";
 import Upcoming from "./views/Upcoming";
 import Profile from "./views/profile";
@@ -28,7 +28,7 @@ function App() {
               {/* home */}
               <Nav.Item>
                 <Nav.Link href="/">
-                  <Link to="/">Home</Link>
+                  <Link to="/">Discover</Link>
                 </Nav.Link>
               </Nav.Item>
               <Nav.Item>
@@ -63,7 +63,7 @@ function App() {
         </Container>
         <div className="display"></div>
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<Discover />} />
           <Route path="/TopRated" element={<TopRated />} />
           <Route path="/Upcoming" element={<Upcoming />} />
           <Route path="/profile" element={<Profile />} />
