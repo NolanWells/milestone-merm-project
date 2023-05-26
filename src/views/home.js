@@ -32,7 +32,7 @@ export default function Home() {
   };
 
   return (
-   <Container>
+   <Container className="homeContainer">
       <div className="d-flex flex-wrap">
         {movies ? (
           // CREATES A CARD FOR EACH MOVIE IMAGE
@@ -49,7 +49,7 @@ export default function Home() {
                 alt="Movie poster"
                 style={{ width: "200px", height: "250px", objectFit: "cover" }}
               />
-              <Card.Body>
+              <Card.Body className="homepageCards">
                 <Card.Title>{movie.original_title}</Card.Title>
                 <Nav>
                   <Nav.Item>
