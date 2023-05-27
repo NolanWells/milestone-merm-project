@@ -42,20 +42,31 @@ export default function Upcoming() {
               <Card
                 className="d-flex flex-column justify-content-center align-items-center"
                 key={movie.id}
-                style={{ width: "200px", height: "450px", marginTop: "50px" }}
+                style={{ width: "200px", height: "450px", marginTop: "50px", border: 'solid black 1px' }}
               >
-                <Card.Img
-                  variant="top"
-                  src={getImageUrl(movie.poster_path)}
-                  alt="Movie poster"
-                  style={{ position: "absolute", top: "0", width: "200px", height: "300px", objectFit: "cover" }}
-                />
+                <Nav>
+                  <Nav.Item>
+                    <Link to={`/details/${movie.id}`}>
+                      <Button
+                        style={{ position: "absolute", zIndex: '1', opacity: '0', left: '-.5px', top: "0", width: "200px", height: "300px", objectFit: "cover" }}
+                        to={`/details?data=${movie.id}`}
+
+                      ></Button>
+                    </Link>
+                    <Card.Img
+                      variant="top"
+                      src={getImageUrl(movie.poster_path)}
+                      alt="Movie poster"
+                      style={{ position: "absolute", left: '-.5px', top: "0", width: "200px", height: "300px", objectFit: "cover" }}
+                    />
+                  </Nav.Item>
+                </Nav>
                 <Card style={{ position: "absolute", bottom: "0", top: "67%", right: "0", left: "0" }}>
                   <Card.Title style={{ textAlign: "center" }}>{movie.original_title}</Card.Title>
                   <Stars />
                   <Nav>
                     <Nav.Item>
-                      <Nav.Link href={`/details?data=${movie.id}`}>
+                      <Link to={`/details/${movie.id}`}>
                         <Button
                           style={{ position: "absolute", bottom: "10%", left: "18%" }}
                           variant="dark"
@@ -63,7 +74,7 @@ export default function Upcoming() {
                           to={`/details?data=${movie.id}`}>
                           Details & Reviews
                         </Button>
-                      </Nav.Link>
+                      </Link>
                     </Nav.Item>
                   </Nav>
                 </Card>
