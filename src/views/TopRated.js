@@ -55,7 +55,7 @@ export default function TopRated() {
                   <Stars />
                   <Nav>
                     <Nav.Item>
-                      <Nav.Link href={`/details?data=${movie.id}`}>
+                      <Link to={`/details/${movie.id}`}>
                         <Button
                           style={{ position: "absolute", bottom: "10%", left: "18%" }}
                           variant="dark"
@@ -63,7 +63,7 @@ export default function TopRated() {
                           to={`/details?data=${movie.id}`}>
                           Details & Reviews
                         </Button>
-                      </Nav.Link>
+                      </Link>
                     </Nav.Item>
                   </Nav>
                 </Card>
