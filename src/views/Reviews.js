@@ -37,7 +37,7 @@ export default function Reviews({ movie_id }) {
         {reviews.map((review, index) => (
 
           <Card.Body key={index}>
-            <div style={{ borderBottom: 'solid gray 1px'}}>
+            <div style={{ borderBottom: 'solid gray 1px' }}>
               <Card.Text>Comment: {review.comment}</Card.Text>
               <Card.Text>Rating: { starRating(review.rating) }</Card.Text>
               <br/>
