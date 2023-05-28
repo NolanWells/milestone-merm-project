@@ -17,21 +17,30 @@ export default function Reviews({ movie_id }) {
       .catch((err) => console.log(`axios request didnt work :( ${err}`))
   }, [movie_id])
 
+  function starRating(rating) {
+    let star = ''
+
+    for (let i = 0; i < rating; i++) {
+      star += '⭐'
+    }
+    return star;
+  }
+
   return (
     <>
       <h5 className="d-flex flex-column justify-content-center align-items-center">Movie Reviews</h5>
       {/* <p>Movie ID: {movie_id}</p> */}
       <br />
-      <CardGroup>
-
-        <Card.Body>
-          <Stars />
-        </Card.Body>
+      <Card.Title><Stars movie_id={ movie_id } /></Card.Title>
+      <CardGroup className="postedReviews" style={{ maxHeight: '450px', borderTop: 'solid black 1px' }}>
 
         {reviews.map((review, index) => (
+
           <Card.Body key={index}>
-            <Card.Text>Comment: {review.comment}</Card.Text>
-            <Card.Text>Rating: {review.rating}</Card.Text>
+            <div>
+              <Card.Text>Comment: {review.comment}</Card.Text>
+              <Card.Text>Rating: { starRating(review.rating) }</Card.Text>
+            </div>
           </Card.Body>
         ))}
       </CardGroup>
