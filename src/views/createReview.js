@@ -27,14 +27,14 @@ export default function Createreview(props) {
                         id="rating"
                         name="rating"
                         type="number"
-                        step=".5"
+                        step="1"
                         min="0"
                         max="5"
                         required
                     ></input>
                 </div>
                 <br />
-                <button id="btn btn-three" style={{ position: "absolute", left: "38%", margin: "15px" }} type="sumbit">Submit</button>
+                <button id="btn btn-three" style={{ position: "absolute", left: "36%", margin: "15px" }} type="sumbit">Submit</button>
             </form>
         </div>
     );
