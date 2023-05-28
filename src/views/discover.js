@@ -38,9 +38,8 @@ export default function Home() {
         {movies ? (
           // CREATES A CARD FOR EACH MOVIE IMAGE
           movies.results.map((movie) => (
-            <div className="col-lg-3 col-md-4 col-sm-6" key={movie.id}>
+            <div className="col-lg-3" key={movie.id}>
               <Card
-                className="d-flex flex-column justify-content-center align-items-center"
                 key={movie.id}
                 style={{ width: "200px", height: "450px", marginTop: "50px", border: 'solid black 1px' }}
               >

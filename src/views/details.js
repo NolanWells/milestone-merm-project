@@ -8,7 +8,7 @@ import { CardGroup } from "react-bootstrap/esm";
 import Reviews from "./Reviews";
 import Createreview from "./createReview";
 
-export default function Home() {
+export default function Details() {
   const [details, setDetails] = useState(null);
 
   //this will look at the params and find movie id

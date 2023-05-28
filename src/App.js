@@ -1,4 +1,4 @@
-// import './App.css';
+import './App.css';
 import { HashRouter as Router, Link, Route, Routes } from "react-router-dom";
 import Nav from "react-bootstrap/Nav";
 import Container from "react-bootstrap/Container";
@@ -11,26 +11,17 @@ import Details from "./views/details";
 
 function App() {
   return (
-    <>
       <Router>
         <Container className="navbar navbar-expand-sm bg-dark navbar-light sticky-top">
           <div className="container-fluid">
-            <button
-              className="navbar-toggler"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#mynavbar"
-            >
-              <span className="navbar-toggler-icon"></span>
-            </button>
-
             <Nav>
-              {/* home */}
+
               <Nav.Item>
                 <Nav.Link href="/">
                   <Link to="/">Discover</Link>
                 </Nav.Link>
               </Nav.Item>
+              
               <Nav.Item>
                 <Nav.Link href="/">
                   <Link to="/TopRated">TopRated</Link>
@@ -48,20 +39,11 @@ function App() {
                   <Link to="/profile">View Profile</Link>
                 </Nav.Link>
               </Nav.Item>
+              
             </Nav>
-            <form className="d-flex">
-              <input
-                className="form-control me-2"
-                type="text"
-                placeholder="Search"
-              ></input>
-              <button className="btn btn-primary" type="button">
-                Search
-              </button>
-            </form>
           </div>
         </Container>
-        <div className="display"></div>
+
         <Routes>
           <Route path="/" element={<Discover />} />
           <Route path="/TopRated" element={<TopRated />} />
@@ -70,7 +52,6 @@ function App() {
           <Route path="/details/:movie_id" element={<Details />} />
         </Routes>
       </Router>
-    </>
   );
 }
 
