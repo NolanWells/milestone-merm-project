@@ -12,36 +12,36 @@ import Details from "./views/details";
 function App() {
   return (
       <Router>
-        <Container className="navbar navbar-expand-sm bg-dark navbar-light sticky-top">
-          <div className="container-fluid">
-            <Nav>
+        <Container className="bg-dark">
+          
+            <Nav justify variant="tabs,dark" defaultActiveKey="/home" bg="dark">
 
               <Nav.Item>
                 <Nav.Link href="/">
-                  <Link to="/">Discover</Link>
+                  <Link to="/"style={{textDecoration: 'none'}}>Discover</Link>
                 </Nav.Link>
               </Nav.Item>
               
               <Nav.Item>
                 <Nav.Link href="/">
-                  <Link to="/TopRated">TopRated</Link>
+                  <Link to="/TopRated"style={{textDecoration: 'none'}}>TopRated</Link>
                 </Nav.Link>
               </Nav.Item>
 
               <Nav.Item>
                 <Nav.Link href="/">
-                  <Link to="/Upcoming">Upcoming</Link>
+                  <Link to="/Upcoming"style={{textDecoration: 'none'}}>Upcoming</Link>
                 </Nav.Link>
               </Nav.Item>
 
               <Nav.Item>
                 <Nav.Link href="/">
-                  <Link to="/profile">View Profile</Link>
+                  <Link to="/profile"style={{textDecoration: 'none'}}>View Profile</Link>
                 </Nav.Link>
               </Nav.Item>
               
             </Nav>
-          </div>
+         
         </Container>
 
         <Routes>
