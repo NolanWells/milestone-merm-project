@@ -25,9 +25,8 @@ export default function Reviews({ movie_id }) {
       <CardGroup>
 
         <Card.Body>
-          <Stars />
+          <Card.Title><Stars /></Card.Title>
         </Card.Body>
-
         {reviews.map((review, index) => (
           <Card.Body key={index}>
             <Card.Text>Comment: {review.comment}</Card.Text>
