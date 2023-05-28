@@ -63,7 +63,7 @@ export default function Upcoming() {
                 </Nav>
                 <Card style={{ position: "absolute", bottom: "0", top: "67%", right: "0", left: "0" }}>
                   <Card.Title style={{ textAlign: "center" }}>{movie.original_title}</Card.Title>
-                  <Stars />
+                  <Stars movie_id = { movie.id } />
                   <Nav>
                     <Nav.Item>
                       <Link to={`/details/${movie.id}`}>
