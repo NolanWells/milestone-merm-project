@@ -32,19 +32,17 @@ export default function Reviews({ movie_id }) {
       {/* <p>Movie ID: {movie_id}</p> */}
       <br />
       <Card.Title><Stars movie_id={ movie_id } /></Card.Title>
-      <CardGroup className="postedReviews" style={{ maxHeight: '450px', borderTop: 'solid black 1px' }}>
-
-        {reviews.map((review, index) => (
-
-          <Card.Body key={index}>
-            <div style={{ borderBottom: 'solid gray 1px'}}>
+      <div className="postedReviews" style={{ maxHeight: '450px'}}>
+      {reviews.map((review, index) => (
+          <Card key={index} className="mb-3">
+            <Card.Body style={{ borderBottom: "solid gray 1px", borderTop: 'solid black 1px'  }}>
               <Card.Text>Comment: {review.comment}</Card.Text>
-              <Card.Text>Rating: { starRating(review.rating) }</Card.Text>
-              <br/>
-            </div>
-          </Card.Body>
+              <Card.Text>Rating: {starRating(review.rating)}</Card.Text>
+              <br />
+            </Card.Body>
+          </Card>
         ))}
-      </CardGroup>
+      </div>
     </>
   )
 
