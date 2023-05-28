@@ -56,7 +56,7 @@ export default function Home() {
                       variant="top"
                       src={getImageUrl(movie.poster_path)}
                       alt="Movie poster"
-                      style={{ position: "absolute", left: '-.5px', top: "0", width: "200px", height: "300px", objectFit: "cover" }}
+                      style={{ position: "absolute", left: '-.7px', top: "0", width: "200px", height: "300px", objectFit: "cover" }}
                     />
                   </Nav.Item>
                 </Nav>
