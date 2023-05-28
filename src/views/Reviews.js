@@ -31,7 +31,7 @@ export default function Reviews({ movie_id }) {
       <h5 className="d-flex flex-column justify-content-center align-items-center">Movie Reviews</h5>
       {/* <p>Movie ID: {movie_id}</p> */}
       <br />
-      <Card.Title><Stars movie_id={ movie_id } /></Card.Title>
+      <Card.Title className="pb-3" style={{ borderBottom: 'solid gray 1px'}}><Stars movie_id={ movie_id } /></Card.Title>
       <div className="postedReviews" style={{ maxHeight: '450px'}}>
       {reviews.map((review, index) => (
           <Card key={index} className="mb-3">
