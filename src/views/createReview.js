@@ -27,7 +27,7 @@ export default function Createreview(props) {
                         id="rating"
                         name="rating"
                         type="number"
-                        step=".5"
+                        step="1"
                         min="0"
                         max="5"
                         required
