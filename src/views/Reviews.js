@@ -40,6 +40,7 @@ export default function Reviews({ movie_id }) {
             <div style={{ borderBottom: 'solid gray 1px'}}>
               <Card.Text>Comment: {review.comment}</Card.Text>
               <Card.Text>Rating: { starRating(review.rating) }</Card.Text>
+              <br/>
             </div>
           </Card.Body>
         ))}
