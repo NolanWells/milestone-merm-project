@@ -39,7 +39,7 @@
 
 .homeContainer {
   position: relative;
-  left: 62.5px;
+  /* left: 62.5px; this was the problem*/ 
 }
 body{
   background-image: 

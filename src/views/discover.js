@@ -34,11 +34,11 @@ export default function Home() {
 
   return (
     <Container className="homeContainer">
-      <div className="d-flex flex-wrap">
+      <div className="d-flex flex-wrap justify-content-around align-items-center">
         {movies ? (
           // CREATES A CARD FOR EACH MOVIE IMAGE
           movies.results.map((movie) => (
-            <div className="col-lg-3" key={movie.id}>
+            <div className="m-4" key={movie.id}>
               <Card
                 key={movie.id}
                 style={{ width: "200px", height: "450px", marginTop: "50px", border: 'solid black 1px' }}
