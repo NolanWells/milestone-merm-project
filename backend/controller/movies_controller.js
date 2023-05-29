@@ -29,6 +29,8 @@ router.get('/', (req, res) => {
 })
 // /movies
 router.post('/', (req, res) => {
+    // movie_id=23131&comment=hi&rating=1
+
     console.log(req.body);
     const { comment, rating, movie_id } = req.body;
 
