@@ -44,7 +44,7 @@ export default function Details() {
         <Card
           className="detailsCard1 d-flex flex-column justify-content-center align-items-center"
           key={details && details.id}
-          style={{ border: 'solid black 1px', maxHeight: '600px' }}
+          style={{ border: 'solid black 1px', maxHeight: '650px' }}
         >
           <br />
           <h5>{details && details.original_title}</h5>
