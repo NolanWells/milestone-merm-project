@@ -42,9 +42,9 @@ export default function Details() {
       <CardGroup style={{ border: 'solid black 3px' }}>
         {/* // CARD 1 */}
         <Card
-          className="d-flex flex-column justify-content-center align-items-center"
+          className="detailsCard1 d-flex flex-column justify-content-center align-items-center"
           key={details && details.id}
-          style={{ border: 'solid black 1px' }}
+          style={{ border: 'solid black 1px', maxHeight: '600px' }}
         >
           <br />
           <h5>{details && details.original_title}</h5>
@@ -56,6 +56,7 @@ export default function Details() {
           />
           <Card.Body><details><summary><b><u>Overview</u></b></summary>{details && details.overview}</details></Card.Body>
           <Card.Body><details><summary><b><u>Other Information</u></b></summary><b>Release Date:</b> {details && details.release_date}<br /><b>Runtime:</b> {details && details.runtime} minutes</details></Card.Body>
+          <br/>
         </Card>
 
         {/* // CARD 2 */}

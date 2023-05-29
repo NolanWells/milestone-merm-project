@@ -34,7 +34,7 @@ export default function Createreview(props) {
                     ></input>
                 </div>
                 <br />
-                <button id="btn btn-three" style={{ position: "absolute", left: "36%", margin: "15px" }} type="sumbit">Submit</button>
+                <button className = "button-89" style={{ position: "absolute", left: "40%", marginTop: "10%" }} type="sumbit">Submit</button>
             </form>
         </div>
     );
