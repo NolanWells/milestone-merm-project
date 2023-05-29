@@ -2,7 +2,6 @@ import { useState, useEffect } from "react";
 // here I will use axios to request data from the server => databse
 import axios from "axios";
 import Card from "react-bootstrap/Card"
-import CardGroup from "react-bootstrap/CardGroup"
 
 import Stars from "./stars";
 
