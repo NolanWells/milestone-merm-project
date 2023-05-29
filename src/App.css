@@ -44,8 +44,11 @@
 body{
   background-image: 
   
-url('https://wallpapersfortech.com/wp-content/uploads/2021/07/White-Hexagon-Desktop-Wallpaper.png')
-  
+url('https://wallpapersfortech.com/wp-content/uploads/2021/07/White-Hexagon-Desktop-Wallpaper.png');
+position: sticky;
+
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .postedReviews {
