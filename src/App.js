@@ -12,7 +12,7 @@ import Details from "./views/details";
 function App() {
   return (
       <Router>
-        <Container className='bg-dark'>
+        <Container className='bg-dark' style={{ backgroundImage: 'linear-gradient(92.83deg, #4b0082 0%, #000000 100%)' }}>
           
             <Nav justify variant="tabs,dark" defaultActiveKey="/home" bg="dark">
 
