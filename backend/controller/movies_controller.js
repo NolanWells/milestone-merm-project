@@ -46,5 +46,13 @@ router.post('/', (req, res) => {
    res.redirect('/')
 })
 
+router.delete('/:id', (req, res) => {
+    db.Movies.findByIdAndDelete(req.params.id)
+    .then(() => {
+      res.redirect(`/`) 
+      .catch(err =>console.log(err))
+    })
+  })
+
 
 module.exports = router

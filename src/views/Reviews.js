@@ -4,6 +4,7 @@ import axios from "axios";
 import Card from "react-bootstrap/Card"
 
 import Stars from "./stars";
+import DeleteReview from "./deleteComment";
 
 export default function Reviews({ movie_id }) {
   const [reviews, setReviews] = useState([])
@@ -37,6 +38,7 @@ export default function Reviews({ movie_id }) {
             <Card.Body style={{ background: 'linear-gradient(90deg, #fdfcfb, #778899)'}} >
               <Card.Text>Comment: {review.comment}</Card.Text>
               <Card.Text>Rating: {starRating(review.rating)}</Card.Text>
+              <DeleteReview />
             </Card.Body>
           </Card>
         ))}
