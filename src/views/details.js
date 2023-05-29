@@ -60,7 +60,7 @@ export default function Details() {
         </Card>
 
         {/* // CARD 2 */}
-        <Card style={{ border: 'solid black 1px' }}>
+        <Card style={{ border: 'solid black 1px', backgroundColor:'#494949', color:'white' }}>
           <br />
           <Reviews movie_id={movie_id} />
         </Card>

@@ -45,10 +45,9 @@ body{
   background-image: 
   
 url('https://wallpapersfortech.com/wp-content/uploads/2021/07/White-Hexagon-Desktop-Wallpaper.png');
-position: sticky;
-
-  background-repeat: no-repeat;
-  background-size: cover;
+ 
+ background-repeat: no-repeat;
+ background-size: cover;
 }
 
 .postedReviews {
@@ -56,7 +55,9 @@ position: sticky;
   display: flex;
   flex-grow: 1;
   flex-direction: column;
+  color: #494949;
 }
+
 
 .detailsCard1 {
   overflow-y: auto;
