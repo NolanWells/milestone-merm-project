@@ -47,12 +47,11 @@ router.post('/', (req, res) => {
 })
 
 router.delete('/:id', (req, res) => {
-    db.Movies.findByIdAndDelete(req.params.id)
-    .then(() => {
-      res.redirect(`/`) 
-      .catch(err =>console.log(err))
-    })
-  })
+    db.reviews.findByIdAndDelete(req.params.id)
+        .then(() => console.log('is this working?'))
+        .catch(err => console.log(err))
+    res.redirect(`/`)
+})
 
 
 module.exports = router
