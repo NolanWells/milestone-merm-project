@@ -41,7 +41,7 @@ export default function Home() {
             <div className="m-4" key={movie.id}>
               <Card
                 key={movie.id}
-                style={{ width: "200px", height: "450px", marginTop: "50px", border: 'solid black 1px' }}
+                style={{ width: "200px", height: "290px", marginTop: "50px", border: 'solid black 1px' }}
               >
                 <Nav>
                   <Nav.Item>
