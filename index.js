@@ -26,17 +26,5 @@ app.get('*', (req, res) => {
     res.render('error404')
 })
 
-// HEROKU TEST - IGNORE / DELETE IF YOU WANT TO
-.get('/times', (req, res) => res.send(showTimes()))
-
-function showTimes() {
-    const times = process.env.TIMES || 5
-    let result = ''
-    for (i =0; i < times; i++) {
-        result += I + ' '
-    }
-    return result
-}
-
 // Listen for Connections
 app.listen(process.env.PORT)
