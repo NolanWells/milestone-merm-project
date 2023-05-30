@@ -43,7 +43,7 @@
 }
 body{
   background-image: 
-  url('C:\Users\baile\SDSU\milestone-project_2\milestone-merm-project\public\background.webp');
+  url('../public/background.webp');
   background-repeat: no-repeat;
   background-attachment: fixed; /*Use 'scroll' to make the header and footer scroll with the background.*/
   background-size: cover;
