@@ -43,7 +43,7 @@ export default function Reviews({ movie_id }) {
             <Card.Body style={{ background: 'linear-gradient(90deg, #fdfcfb, #778899)'}} >
               <Card.Text>Comment: {review.comment}</Card.Text>
               <Card.Text>Rating: {starRating(review.rating)}</Card.Text>
-              <button onClick={() => deleteReview(review._id)}>Delete</button>
+              <button className="button-78" style={{ float: 'right' }} onClick={() => deleteReview(review._id)}>Remove Comment</button>
             </Card.Body>
           </Card>
         ))}
