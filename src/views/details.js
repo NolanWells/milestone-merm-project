@@ -10,6 +10,8 @@ import Createreview from "./createReview";
 
 export default function Details() {
   const [details, setDetails] = useState(null);
+  const [refreshReviews, setRefreshReviews] = useState(false); // State to trigger refresh
+
 
   //this will look at the params and find movie id
   const { movie_id } = useParams()
@@ -37,6 +39,13 @@ export default function Details() {
     return baseImageUrl + posterPath;
   };
 
+  function handleDeleteReview(reviewId) {
+    // Perform deletion logic using the reviewId
+
+    // Trigger refresh of Reviews component
+    setRefreshReviews((prevValue) => !prevValue);
+  }
+
   return (
     <Container>
       <CardGroup style={{ border: 'solid black 3px' }}>
@@ -62,7 +71,7 @@ export default function Details() {
         {/* // CARD 2 */}
         <Card style={{ border: 'solid black 1px' }}>
           <br />
-          <Reviews movie_id={movie_id} />
+          <Reviews movie_id={movie_id}  onDeleteReview={handleDeleteReview} key={refreshReviews} />
         </Card>
 
         {/* // CARD 3 */}

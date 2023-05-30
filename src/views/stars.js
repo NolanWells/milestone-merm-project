@@ -15,7 +15,6 @@ export default function Stars({ movie_id }) {
             .catch((err) => console.log(`axios request didnt work :( ${err}`))
     }, [movie_id])
 
-    console.log(starReviews)
 
     function averageRating(reviews) {
 
@@ -33,7 +32,6 @@ export default function Stars({ movie_id }) {
             let star = ''
             let rating = Math.round((totalRating / starReviews.length))
 
-            console.log(rating)
 
             for (let i = 0; i < rating; i++) {
                 star += '⭐'

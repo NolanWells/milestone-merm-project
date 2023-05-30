@@ -49,14 +49,22 @@ router.post('/', (req, res) => {
     newReview.save()
     .then(() => console.log('document has been created'))
     .catch(err =>console.log(err))
-   res.redirect('/')
+   res.redirect(`/#/details/${movie_id}`)
 })
 
 router.delete('/:id', (req, res) => {
-    db.reviews.findByIdAndDelete(req.params.id)
-        .then(() => console.log('is this working?'))
-        .catch(err => console.log(err))
-    res.redirect(`/`)
+    const reviewId = req.params.id;
+    
+    reviewSchema.findById(reviewId)
+    .then((review) => {
+        // console.log(review)
+        reviewSchema.findByIdAndDelete(reviewId)
+        .then(() => {
+        //   console.log(`Deleting review with ID: ${reviewId}`);
+          res.status(200).send("Deletion successful");
+        })
+    })
+    res.status(200)
 })
 
 
