@@ -1,4 +1,5 @@
 import React from "react";
+import RatingStars from "./ratingStars";
 export default function Createreview(props) {
     const { movie_id } = props;
     return (
@@ -6,6 +7,7 @@ export default function Createreview(props) {
             <h5 className="d-flex flex-column justify-content-center align-items-center">Add Your Review</h5>
             <form action="/movies" method="POST">
                 <input type="hidden" name="movie_id" value={movie_id} /> {/*passes the movie_id and cannot be seen*/}
+                <input type="hidden" id="rating" value={0}/>
                 <label htmlFor="review"></label>
                 <textarea
                     className="form-control"
@@ -17,7 +19,8 @@ export default function Createreview(props) {
                 ></textarea>
                 <br />
                 <br />
-                <h5>
+
+                {/* <h5>
                     <label className="d-flex flex-column justify-content-center align-items-center" htmlFor="stars">Star Rating</label>
                 </h5>
                 <div>
@@ -32,8 +35,17 @@ export default function Createreview(props) {
                         max="5"
                         required
                     ></input>
-                </div>
+                </div> */}
+                <RatingStars/>
                 <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                
                 <button className = "button-79" style={{ position: "absolute", left: "34%", marginTop: "10%" }} type="sumbit">Submit</button>
             </form>
         </div>
