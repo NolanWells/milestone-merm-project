@@ -33,6 +33,7 @@ export default function Reviews({ movie_id, onDeleteReview }) {
       .catch((err) => console.log(`axios request did not work ${err}`));
   }
 
+  console.log(reviews)
   return (
     <>
       <h5 className="d-flex flex-column justify-content-center align-items-center">Movie Reviews</h5>
