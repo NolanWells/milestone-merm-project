@@ -24,6 +24,11 @@ export default function Reviews({ movie_id }) {
     }
     return star;
   }
+  function deleteReview (reviewObjectId){
+    axios.delete(`/movies/id/${reviewObjectId}`)
+    .then(() => console.log('axios request worked'))
+    .catch((err) => console.log('axios request did not work'))
+  }
 
   return (
     <>
@@ -33,10 +38,11 @@ export default function Reviews({ movie_id }) {
       <Card.Title><Stars movie_id={ movie_id } /></Card.Title>
       <div className="postedReviews" style={{ maxHeight: '450px' }}>
       {reviews.map((review, index) => (
-          <Card key={index} className="mb-3">
+        <Card key={index} className="mb-3">
             <Card.Body style={{ background: 'linear-gradient(90deg, #fdfcfb, #778899)'}} >
               <Card.Text>Comment: {review.comment}</Card.Text>
               <Card.Text>Rating: {starRating(review.rating)}</Card.Text>
+              <button onClick={() => deleteReview(review._id)}>Delete</button>
             </Card.Body>
           </Card>
         ))}
