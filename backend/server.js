@@ -20,12 +20,11 @@ app.use(express.static("public"));
 // Have Node serve the files for our built React app
 app.use(express.static(path.join(__dirname, '../build')));
 
+app.use('/movies', movies)
+
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, '../build', 'index.html'));
 })
-
-
-app.use('/movies', movies)
 
 app.listen(process.env.PORT, () => {
     console.log(`server running on port ${process.env.PORT}`);
