@@ -4,6 +4,7 @@ import axios from "axios";
 import Card from "react-bootstrap/Card"
 
 import Stars from "./stars";
+import DeleteReview from "./deleteComment";
 
 export default function Reviews({ movie_id }) {
   const [reviews, setReviews] = useState([])
@@ -36,7 +37,7 @@ export default function Reviews({ movie_id }) {
       {/* <p>Movie ID: {movie_id}</p> */}
       <br />
       <Card.Title><Stars movie_id={ movie_id } /></Card.Title>
-      <div className="postedReviews" style={{ maxHeight: '450px' }}>
+      <div className="postedReviews" style={{ maxHeight: '530px' }}>
       {reviews.map((review, index) => (
         <Card key={index} className="mb-3">
             <Card.Body style={{ background: 'linear-gradient(90deg, #fdfcfb, #778899)'}} >

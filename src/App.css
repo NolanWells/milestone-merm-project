@@ -43,10 +43,10 @@
 }
 body{
   background-image: 
-  url('https://png.pngtree.com/thumb_back/fh260/background/20210115/pngtree-abstract-hexagon-gray-gradient-white-minimalist-medical-technology-background-image_524812.jpg');
-
-
-  
+  url('../public/background.webp');
+  background-repeat: no-repeat;
+  background-attachment: fixed; /*Use 'scroll' to make the header and footer scroll with the background.*/
+  background-size: cover;
 }
 
 .postedReviews {
@@ -202,6 +202,118 @@ body{
 }
 
 .button-78:disabled {
+  cursor: default;
+  opacity: .24;
+}
+
+/* __________________________________________ */
+
+.button-79 {
+  align-items: center;
+  appearance: none;
+  background-clip: padding-box;
+  background-color: initial;
+  background-image: none;
+  border-style: none;
+  box-sizing: border-box;
+  color: black;
+  cursor: pointer;
+  display: inline-block;
+  flex-direction: row;
+  flex-shrink: 0;
+  font-family: Eina01,sans-serif;
+  font-size: 12px;
+  font-weight: 800;
+  justify-content: center;
+  line-height: 3px;
+  margin: 0;
+  min-height: 16px;
+  outline: none;
+  overflow: visible;
+  padding: 19px 26px;
+  pointer-events: auto;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  text-transform: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: middle;
+  width: auto;
+  word-break: keep-all;
+  z-index: 0;
+}
+
+@media (min-width: 768px) {
+  .button-79 {
+    padding: 19px 32px;
+  }
+}
+
+.button-79:before,
+.button-79:after {
+  border-radius: 80px;
+}
+
+.button-79:before {
+  background-image: linear-gradient(92.83deg, #5f9ea0 0%, #00008b 100%);
+  content: "";
+  display: block;
+  height: 100%;
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: -2;
+}
+
+.button-79:after {
+  background-color: initial;
+  background-image: linear-gradient(92.83deg, #f5fffa 0, #d3d3d3 100%);
+  bottom: 4px;
+  content: "";
+  display: block;
+  left: 4px;
+  overflow: hidden;
+  position: absolute;
+  right: 4px;
+  top: 4px;
+  transition: all 100ms ease-out;
+  z-index: -1;
+}
+
+.button-79:hover:not(:disabled):before {
+  background: linear-gradient(92.83deg, #5f9ea0 0%, #00008b 100%);
+}
+
+.button-79:hover:not(:disabled):after {
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  transition-timing-function: ease-in;
+  opacity: 0;
+}
+
+.button-79:active:not(:disabled) {
+  color: #ccc;
+}
+
+.button-79:active:not(:disabled):before {
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, .2), rgba(0, 0, 0, .2)), linear-gradient(92.8 100%);
+}
+
+.button-79:active:not(:disabled):after {
+  background-image: linear-gradient(#541a0f 0, #0c0d0d 100%);
+  bottom: 4px;
+  left: 4px;
+  right: 4px;
+  top: 4px;
+}
+
+.button-79:disabled {
   cursor: default;
   opacity: .24;
 }

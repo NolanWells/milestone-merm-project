@@ -52,5 +52,12 @@ router.post('/', (req, res) => {
    res.redirect('/')
 })
 
+router.delete('/:id', (req, res) => {
+    db.reviews.findByIdAndDelete(req.params.id)
+        .then(() => console.log('is this working?'))
+        .catch(err => console.log(err))
+    res.redirect(`/`)
+})
+
 
 module.exports = router
