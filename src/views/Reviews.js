@@ -2,13 +2,12 @@ import { useState, useEffect } from "react";
 // here I will use axios to request data from the server => databse
 import axios from "axios";
 import Card from "react-bootstrap/Card"
-
 import Stars from "./stars";
-import DeleteReview from "./deleteComment";
+// import DeleteReview from "./deleteComment";
 
-export default function Reviews({ movie_id }) {
+export default function Reviews({ movie_id, onDeleteReview }) {
   const [reviews, setReviews] = useState([])
-
+  
   useEffect(() => {
     axios.get(`/movies/id/${movie_id}`)
       .then((response) => {
@@ -25,10 +24,13 @@ export default function Reviews({ movie_id }) {
     }
     return star;
   }
-  function deleteReview (reviewObjectId){
-    axios.delete(`/movies/id/${reviewObjectId}`)
-    .then(() => console.log('axios request worked'))
-    .catch((err) => console.log('axios request did not work'))
+  function deleteReview(reviewId) {
+    axios.delete(`/movies/${reviewId}`)
+      .then(() => {
+        console.log('The deletion was successful');
+        onDeleteReview(reviewId); // Invoke the onDeleteReview callback in parent component
+      })
+      .catch((err) => console.log(`axios request did not work ${err}`));
   }
 
   return (
