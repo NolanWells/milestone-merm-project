@@ -11,7 +11,7 @@ router.use(bodyParser.urlencoded({ extended: true }));
 
 //this is to send reviews from other users about the selected movie on the details page
 router.get('/id/:movie_id', async (req ,res) => {
-    console.log('axios made it to the backend!!!!!');
+    // console.log('axios made it to the backend!!!!!');
     try{
         const movie_id = req.params.movie_id
         const reviews = await reviewSchema.find({ movie_id }).exec();
@@ -19,6 +19,12 @@ router.get('/id/:movie_id', async (req ,res) => {
     }catch(err) {
         return res.status(500).json({ error: 'Internal Server Error' })
     }
+})
+router.delete('/id/:review_id', (req,res) => {
+    const review_id = req.params.review_id
+    reviewSchema.deleteOne( { _id: review_id } )
+    .then(() => console.log(`deleted review`))
+    res.redirect('/')
 })
 
 
