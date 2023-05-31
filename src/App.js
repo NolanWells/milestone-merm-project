@@ -6,7 +6,6 @@ import Container from "react-bootstrap/Container";
 import Discover from "./views/discover";
 import TopRated from "./views/TopRated";
 import Upcoming from "./views/Upcoming";
-import Profile from "./views/profile";
 import Details from "./views/details";
 
 function App() {
@@ -34,11 +33,6 @@ function App() {
                 </Nav.Link>
               </Nav.Item>
 
-              <Nav.Item>
-                <Nav.Link href="/">
-                  <Link className='profileLink' to="/profile"style={{textDecoration: 'none'}}>View Profile</Link>
-                </Nav.Link>
-              </Nav.Item>
               
             </Nav>
          
@@ -48,7 +42,6 @@ function App() {
           <Route path="/" element={<Discover />} />
           <Route path="/TopRated" element={<TopRated />} />
           <Route path="/Upcoming" element={<Upcoming />} />
-          <Route path="/profile" element={<Profile />} />
           <Route path="/details/:movie_id" element={<Details />} />
         </Routes>
       </Router>
