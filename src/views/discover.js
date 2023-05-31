@@ -32,6 +32,8 @@ export default function Home() {
     return baseImageUrl + posterPath;
   };
 
+  console.log(movies)
+
   return (
     <Container className="homeContainer">
       <div className="d-flex flex-wrap justify-content-around align-items-center">
