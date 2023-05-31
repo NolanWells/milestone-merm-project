@@ -53,8 +53,10 @@ export default function Details() {
         <Card
           className="detailsCard1 d-flex flex-column justify-content-center align-items-center"
           key={details && details.id}
-          style={{ border: 'solid black 1px', maxHeight: '650px' }}
+          style={{ border: 'solid black 1px', maxHeight: '700px' }}
         >
+          <br />
+          <br />
           <br />
           <h5>{details && details.original_title}</h5>
           <Card.Img
@@ -71,11 +73,15 @@ export default function Details() {
         {/* // CARD 2 */}
         <Card style={{ border: 'solid black 1px' }}>
           <br />
+          <br />
+          <br />
           <Reviews movie_id={movie_id}  onDeleteReview={handleDeleteReview} key={refreshReviews} />
         </Card>
 
         {/* // CARD 3 */}
         <Card style={{ border: 'solid black 1px' }}>
+          <br />
+          <br />
           <br />
           <Createreview movie_id={movie_id} /> {/*passing down the id so that we can store it with the comment in the database */}
         </Card>
