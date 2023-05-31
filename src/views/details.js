@@ -50,6 +50,9 @@ export default function Details() {
     <Container>
       <CardGroup style={{ border: 'solid black 3px' }}>
         {/* // CARD 1 */}
+        <br/>
+        <br/>
+        <br/>
         <Card
           className="detailsCard1 d-flex flex-column justify-content-center align-items-center"
           key={details && details.id}
