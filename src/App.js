@@ -11,7 +11,7 @@ import Details from "./views/details";
 function App() {
   return (
       <Router>
-        <Container className='fixed-top' style={{ backgroundImage: 'linear-gradient(92.83deg, #4b0082 0%, #000000 100%)' }}>
+        <Container className='bg-dark' style={{ backgroundImage: 'linear-gradient(92.83deg, #4b0082 0%, #000000 100%)' }}>
           
             <Nav justify variant="tabs,dark" defaultActiveKey="/home" bg="dark">
 
@@ -35,8 +35,6 @@ function App() {
 
               
             </Nav>
-            <br/>
-            <br/>
          
         </Container>
 
