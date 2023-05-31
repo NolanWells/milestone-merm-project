@@ -34,13 +34,12 @@ export default function TopRated() {
 
   return (
     <Container className="homeContainer">
-      <div className="d-flex flex-wrap">
+      <div className="d-flex flex-wrap justify-content-around align-items-center">
         {movies ? (
           // CREATES A CARD FOR EACH MOVIE IMAGE
           movies.results.map((movie) => (
-            <div className="col-lg-3 col-md-4 col-sm-6" key={movie.id}>
+            <div className="m-4" key={movie.id}>
               <Card
-                className="d-flex flex-column justify-content-center align-items-center"
                 key={movie.id}
                 style={{ width: "200px", height: "450px", marginTop: "50px", border: 'solid black 1px' }}
               >
@@ -57,7 +56,7 @@ export default function TopRated() {
                       variant="top"
                       src={getImageUrl(movie.poster_path)}
                       alt="Movie poster"
-                      style={{ position: "absolute", left: '-.5px', top: "0", width: "200px", height: "300px", objectFit: "cover" }}
+                      style={{ position: "absolute", left: '-.7px', top: "0", width: "200px", height: "300px", objectFit: "cover" }}
                     />
                   </Nav.Item>
                 </Nav>
