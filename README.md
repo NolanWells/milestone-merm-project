@@ -1,3 +1,17 @@
+# Movie Review Project
+
+
+## Created by: Jose M, Bailey Franklin, Nolan Wells, and Stanley Jackson
+
+
+## Functions
+In this app you are able to select movies from past to present.
+
+
+Every movie listed has its own card. If you select the details button on the card it will take you to all of the information and the reviews of the movie. On that page you will be able to rate the movie from 1-5 stars and you will also be able to leave a comment. All of the reviews of the movie will get posted in the middle of the details page and anyone is able to add or delete comments.
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
