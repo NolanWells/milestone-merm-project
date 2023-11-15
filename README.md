@@ -36,7 +36,7 @@ The frontend is setup in the root folder. Meaning that you can just use ""npm st
 ### Installation
 
 
-
+#### frontend
 1. Clone the repo
    ```sh
    git clone https://github.com/Amigostres/milestone-merm-project.git
@@ -49,6 +49,8 @@ The frontend is setup in the root folder. Meaning that you can just use ""npm st
    ```sh
    npm start
    ```
+#### backend
+
 4. now time to add the back end to hold data. Navigate to the backend folder and create a file named '.env'.
    ```
    PORT=3001 # or any other port
