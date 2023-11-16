@@ -39,7 +39,7 @@ The frontend is setup in the root folder. Meaning that you can just use ""npm st
 #### frontend
 1. Clone the repo
    ```sh
-   git clone https://github.com/Amigostres/milestone-merm-project.git
+   git clone https://github.com/NolanWells/milestone-merm-project.git
    ```
 2. Navigate to root folder and install NPM packages at root folder.
    ```sh
