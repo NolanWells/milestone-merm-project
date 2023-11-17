@@ -11,7 +11,12 @@ import Details from "./views/details";
 function App() {
   return (
       <Router>
-        <Container className='fixed-top' style={{ backgroundImage: 'linear-gradient(92.83deg, #4b0082 0%, #000000 100%)' }}>
+        <Container style={{
+          backgroundImage: 'linear-gradient(92.83deg, #4b0082 0%, #000000 100%)',
+          position: 'sticky',
+          top: 0,
+          zIndex: 10
+        }}>
           
             <Nav justify variant="tabs,dark" defaultActiveKey="/home" bg="dark">
 
