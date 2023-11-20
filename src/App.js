@@ -21,7 +21,7 @@ function App() {
           padding: 5,
         }}
       >
-        <Nav justify variant="tabs,dark" defaultActiveKey="/home" bg="dark">
+        <Nav justify variant="tabs, dark" defaultActiveKey="/home" bg="dark">
           <Nav.Item>
             <Nav.Link href="/">
               <Link
