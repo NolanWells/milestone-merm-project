@@ -23,19 +23,19 @@ function App() {
       >
         <Nav justify variant="tabs, dark" defaultActiveKey="/home" bg="dark">
           <Nav.Item>
-            <Nav.Link as={Link} to="/" className="discoverLink" style={{ textDecoration: "none" }}>
+            <Nav.Link as={Link} to="/" className="navLink" style={{ textDecoration: "none" }}>
               Discover
             </Nav.Link>
           </Nav.Item>
 
           <Nav.Item>
-            <Nav.Link as={Link} to="/TopRated" style={{ textDecoration: "none" }}>
+            <Nav.Link as={Link} to="/TopRated" className="navLink" style={{ textDecoration: "none" }}>
               TopRated
             </Nav.Link>
           </Nav.Item>
 
           <Nav.Item>
-            <Nav.Link as={Link} to="/Upcoming" style={{ textDecoration: "none" }}>
+            <Nav.Link as={Link} to="/Upcoming" className="navLink" style={{ textDecoration: "none" }}>
               Upcoming
             </Nav.Link>
           </Nav.Item>

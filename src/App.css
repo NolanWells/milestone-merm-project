@@ -62,29 +62,14 @@ body {
   flex-direction: column;
 }
 
-.discoverLink {
+.navLink {
   color: #fff;
 }
-.discoverLink:hover {
+.navLink:hover {
   color: #ccc;
   letter-spacing: 2px;
 }
 
-.topRatedLink {
-  color: #fff;
-}
-.topRatedLink:hover {
-  color: #ccc;
-  letter-spacing: 2px;
-}
-
-.upcomingLink {
-  color: #fff;
-}
-.upcomingLink:hover {
-  color: #ccc;
-  letter-spacing: 2px;
-}
 
 .profileLink {
   color: #fff;
