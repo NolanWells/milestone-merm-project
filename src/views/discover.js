@@ -43,7 +43,7 @@ export default function Home() {
                 key={movie.id}
                 style={{ width: "200px", height: "450px", marginTop: "50px", border: 'solid black 1px' }}
               >
-                <Nav>
+                <Nav> {/* Title and stars */}
                   <Nav.Item>
                     <Link to={`/details/${movie.id}`}>
                       <Button
@@ -56,11 +56,11 @@ export default function Home() {
                       variant="top"
                       src={getImageUrl(movie.poster_path)}
                       alt="Movie poster"
-                      style={{ position: "absolute", left: '-.7px', top: "0", width: "200px", height: "300px", objectFit: "cover" }}
+                      // style={{ position: "absolute", left: '-.7px', top: "0", width: "200px", height: "300px", objectFit: "cover" }}
                     />
                   </Nav.Item>
                 </Nav>
-                <Card style={{ position: "absolute", bottom: "0", top: "67%", right: "0", left: "0" }}>
+                <Card style={{ position: "absolute", bottom: "0", top: "67%", right: "0", left: "0" }}> {/* added */}
                   <Card.Title style={{ textAlign: "center" }}>{movie.original_title}</Card.Title>
                   <Stars movie_id = { movie.id } />
                   <Nav>

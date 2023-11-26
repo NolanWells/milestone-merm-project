@@ -21,40 +21,22 @@ function App() {
           padding: 5,
         }}
       >
-        <Nav justify variant="tabs,dark" defaultActiveKey="/home" bg="dark">
+        <Nav justify variant="tabs, dark" defaultActiveKey="/home" bg="dark">
           <Nav.Item>
-            <Nav.Link href="/">
-              <Link
-                className="discoverLink"
-                to="/"
-                style={{ textDecoration: "none" }}
-              >
-                Discover
-              </Link>
+            <Nav.Link as={Link} to="/" className="navLink" style={{ textDecoration: "none" }}>
+              Discover
             </Nav.Link>
           </Nav.Item>
 
           <Nav.Item>
-            <Nav.Link href="/">
-              <Link
-                className="topRatedLink"
-                to="/TopRated"
-                style={{ textDecoration: "none" }}
-              >
-                TopRated
-              </Link>
+            <Nav.Link as={Link} to="/TopRated" className="navLink" style={{ textDecoration: "none" }}>
+              TopRated
             </Nav.Link>
           </Nav.Item>
 
           <Nav.Item>
-            <Nav.Link href="/">
-              <Link
-                className="upcomingLink"
-                to="/Upcoming"
-                style={{ textDecoration: "none" }}
-              >
-                Upcoming
-              </Link>
+            <Nav.Link as={Link} to="/Upcoming" className="navLink" style={{ textDecoration: "none" }}>
+              Upcoming
             </Nav.Link>
           </Nav.Item>
         </Nav>
